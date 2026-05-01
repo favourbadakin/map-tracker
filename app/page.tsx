@@ -23,12 +23,12 @@ const categoryIcons: Record<Location["category"], string> = {
 // JS getDay(): 0=Sun,1=Mon,2=Tue,3=Wed,4=Thu,5=Fri,6=Sat
 // Only Sunday is not in the schedule — defaults to index 0 (Monday)
 const jsDayToScheduleIndex: Record<number, number> = {
-  1: 0, // Monday
-  2: 1, // Tuesday
-  3: 2, // Wednesday
-  4: 3, // Thursday
-  5: 4, // Friday
-  6: 5, // Saturday
+  1: 1, // Monday
+  2: 2, // Tuesday
+  3: 3, // Wednesday
+  4: 4, // Thursday
+  5: 5, // Friday
+  6: 0, // Saturday
 };
 
 function getTodayIndex() {

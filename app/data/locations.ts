@@ -164,7 +164,7 @@ export const weekSchedule: DaySchedule[] = [
         id: "sat-18",
         name: "God's Time Variety",
         address: "Ikeja, Lagos",
-        lat: 7.833146,
+        lat: 7.394231,
         lng: 3.833146,
         category: "partner",
         note: "Sign MOU documents",

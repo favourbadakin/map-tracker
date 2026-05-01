@@ -74,7 +74,7 @@ export const weekSchedule: DaySchedule[] = [
       //{
        // id: "sat-7",
         //name: "God's Favour",
-        //address: "Ikeja, Lagos",
+        //address: "Ibadan",
         //lat: 7.40355,
         //lng: 3.83346,
         //category: "partner",
@@ -115,7 +115,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-12",
         name: "God's Surprise Stores",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.392810,
         lng: 3.835356,
         category: "partner",
@@ -123,7 +123,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-13",
         name: "Arostella Stores",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.397986,
         lng: 3.830079,
         category: "partner",
@@ -131,7 +131,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-14",
         name: "Johnson Stores",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.398040,
         lng: 3.834577,
         category: "partner",
@@ -139,7 +139,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-15",
         name: "Gold M Pharmacy",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.390243,
         lng: 3.836449,
         category: "partner",
@@ -147,7 +147,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-16",
         name: "LaweeBee Filling Station",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.390739,
         lng: 3.836590,
         category: "partner",
@@ -155,7 +155,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-17",
         name: "Aluwaju Trading Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.390734,
         lng: 3.81784,
         category: "partner",
@@ -163,7 +163,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-18",
         name: "God's Time Variety",
-        address: "Ikeja, Lagos",
+        address: "Oladele, Ibadan",
         lat: 7.394231,
         lng: 3.833146,
         category: "partner",
@@ -171,7 +171,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-19",
         name: "Ojuoluwa Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.390569,
         lng: 3.836131,
         category: "partner",
@@ -187,7 +187,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-21",
         name: "Kolib Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.385034,
         lng: 3.824099,
         category: "partner",
@@ -195,7 +195,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-22",
         name: "Tenny and Lammy",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.391080,
         lng: 3.836412,
         category: "partner",
@@ -259,7 +259,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-30",
         name: "Clemnah Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.400722,
         lng: 3.839576,
         category: "partner",
@@ -268,7 +268,7 @@ export const weekSchedule: DaySchedule[] = [
       // {
       //   id: "sat-31",
       //   name: "God's Favour (Verasset)",
-      //   address: "Ikeja, Lagos",
+      //   address: "Ibadan",
       //   lat: 7.403484,
       //   lng: 3.833532,
       //   category: "partner",
@@ -293,7 +293,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-34",
         name: "Temitope",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.394330,
         lng: 3.840103,
         category: "partner",
@@ -301,7 +301,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-35",
         name: "God's Favour (Verasset)",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.403484,
         lng: 3.833532,
         category: "partner",
@@ -309,7 +309,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-36",
         name: "Lampeace Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.409268,
         lng: 3.824591,
         category: "partner",
@@ -317,7 +317,7 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-37",
         name: "Gold Store",
-        address: "Ikeja, Lagos",
+        address: "Ibadan",
         lat: 7.401961,
         lng: 3.836116,
         category: "partner",
@@ -394,7 +394,7 @@ export const weekSchedule: DaySchedule[] = [
       {
         id: "thu-1",
         name: "Partner Meeting – GRA",
-        address: "GRA Ikeja, Lagos",
+        address: "GRA Ibadan",
         lat: 6.5997,
         lng: 3.3412,
         category: "partner",

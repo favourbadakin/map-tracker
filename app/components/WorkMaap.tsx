@@ -130,51 +130,11 @@ export default function WorkMap({ locations, selectedId, onSelect }: Props) {
         const bounds = L.latLngBounds(locations.map((l) => [l.lat, l.lng]));
         map.fitBounds(bounds, { padding: [50, 50] });
       }
-
-      // ── User location dot ──
-      // Always reset the marker ref when the map rebuilds so we add a fresh one
-      userMarkerRef.current = null;
-
-      const addOrMoveUserDot = (lat: number, lng: number) => {
-        const icon = L.divIcon({
-          className: "",
-          html: `<div class="user-location-dot"></div>`,
-          iconSize: [18, 18],
-          iconAnchor: [9, 9],
-        });
-
-        if (userMarkerRef.current) {
-          // marker already on this map instance — just move it
-          userMarkerRef.current.setLatLng([lat, lng]);
-        } else {
-          // fresh map — create and store the marker
-          userMarkerRef.current = L.marker([lat, lng], { icon, zIndexOffset: 1000 })
-            .addTo(map)
-            .bindTooltip("You are here", { direction: "top", offset: [0, -10] });
-        }
-      };
-
-      if (navigator.geolocation) {
-        // Clear any existing watcher before starting a new one
-        if (watchIdRef.current !== null) {
-          navigator.geolocation.clearWatch(watchIdRef.current);
-        }
-        watchIdRef.current = navigator.geolocation.watchPosition(
-          (pos) => addOrMoveUserDot(pos.coords.latitude, pos.coords.longitude),
-          () => {}, // silently ignore — dot simply won't appear if denied
-          { enableHighAccuracy: true, maximumAge: 10000 }
-        );
-      }
     };
 
     init();
 
     return () => {
-      if (watchIdRef.current !== null) {
-        navigator.geolocation.clearWatch(watchIdRef.current);
-        watchIdRef.current = null;
-      }
-      userMarkerRef.current = null;
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
@@ -182,6 +142,47 @@ export default function WorkMap({ locations, selectedId, onSelect }: Props) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [locations]);
+
+  // Geolocation watcher — pulsing blue dot
+  useEffect(() => {
+    if (typeof window === "undefined" || !navigator.geolocation) return;
+
+    const placeOrMoveUserMarker = async (lat: number, lng: number) => {
+      if (!mapRef.current) return;
+      const L = (await import("leaflet")).default;
+
+      const icon = L.divIcon({
+        className: "",
+        html: `<div class="user-location-dot"></div>`,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+
+      if (userMarkerRef.current) {
+        userMarkerRef.current.setLatLng([lat, lng]);
+      } else {
+        userMarkerRef.current = L.marker([lat, lng], { icon, zIndexOffset: 1000 })
+          .addTo(mapRef.current)
+          .bindTooltip("You are here", { direction: "top", offset: [0, -10] });
+      }
+    };
+
+    watchIdRef.current = navigator.geolocation.watchPosition(
+      (pos) => placeOrMoveUserMarker(pos.coords.latitude, pos.coords.longitude),
+      () => {}, // silently ignore errors — dot simply won't appear
+      { enableHighAccuracy: true, maximumAge: 10000 }
+    );
+
+    return () => {
+      if (watchIdRef.current !== null) {
+        navigator.geolocation.clearWatch(watchIdRef.current);
+      }
+      if (userMarkerRef.current && mapRef.current) {
+        userMarkerRef.current.remove();
+        userMarkerRef.current = null;
+      }
+    };
+  }, []);
 
   // Open popup when selectedId changes
   useEffect(() => {

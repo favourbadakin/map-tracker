@@ -311,7 +311,7 @@ export default function Home() {
       </div>
       {locations.map((loc, idx) => renderLocationCard(loc, idx))}
       {/* Legend */}
-      <div style={{
+      {/* <div style={{
         padding: "10px 14px", background: "var(--surface)",
         border: "1px solid var(--border)", borderRadius: 12,
       }}>
@@ -326,7 +326,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 

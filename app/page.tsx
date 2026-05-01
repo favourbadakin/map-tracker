@@ -16,7 +16,7 @@ const categoryIcons: Record<Location["category"], string> = {
   client: "👥",
   site: "🏗️",
   partner: "🤝",
-  "": "🏪",
+  //"": "🏪",
 };
 
 // weekSchedule order: Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5

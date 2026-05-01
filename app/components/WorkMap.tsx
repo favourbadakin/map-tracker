@@ -150,7 +150,7 @@ export default function WorkMap({ locations, selectedId, onSelect }: Props) {
           // fresh map — create and store the marker
           userMarkerRef.current = L.marker([lat, lng], { icon, zIndexOffset: 1000 })
             .addTo(map)
-            .bindTooltip("You are here", { direction: "top", offset: [0, -10] });
+            .bindTooltip("", { direction: "top", offset: [0, -10] });
         }
       };
 

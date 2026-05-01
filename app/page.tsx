@@ -343,7 +343,7 @@ export default function Home() {
             fontSize: 20,
           }}>📍</div>
           <div>
-            <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text)" }}>WorkRoute</h1>
+            <h1 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: "-0.03em", color: "var(--text)" }}>My Route</h1>
             <p style={{ margin: 0, fontSize: 11, color: "var(--muted)" }}>Your weekly field map</p>
           </div>
         </div>

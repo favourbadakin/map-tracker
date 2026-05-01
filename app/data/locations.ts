@@ -43,7 +43,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Charity, Gbekuba Ibadan",
         lat: 7.394979,
         lng: 3.829467,
-        category: "client",
+        category: "partner",
         note: "Aspiring Urban Mainstream",
       },
       {
@@ -462,5 +462,5 @@ export const categoryLabels: Record<Location["category"], string> = {
   office: "Office",
   client: "Client",
   site: "Site",
-  partner: "Partner",
+  partner: "Customer",
 };

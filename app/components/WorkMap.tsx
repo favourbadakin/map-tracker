@@ -35,7 +35,8 @@ export default function WorkMap({ locations, selectedId, onSelect }: Props) {
       const map = L.map(containerId, {
         center: [6.5244, 3.3792],
         zoom: 11,
-        zoomControl: false,
+        zoomControl: true,
+        
       });
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {

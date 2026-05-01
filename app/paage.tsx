@@ -19,21 +19,9 @@ const categoryIcons: Record<Location["category"], string> = {
   "": "🏪",
 };
 
-// weekSchedule order: Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5
-// JS getDay(): 0=Sun,1=Mon,2=Tue,3=Wed,4=Thu,5=Fri,6=Sat
-// Only Sunday is not in the schedule — defaults to index 0 (Monday)
-const jsDayToScheduleIndex: Record<number, number> = {
-  1: 0, // Monday
-  2: 1, // Tuesday
-  3: 2, // Wednesday
-  4: 3, // Thursday
-  5: 4, // Friday
-  6: 5, // Saturday
-};
-
-function getTodayIndex() {
-  return jsDayToScheduleIndex[new Date().getDay()] ?? 0;
-}
+const today = new Date().getDay();
+const dayIndex = today === 0 ? 0 : today - 1;
+const initialDay = Math.min(dayIndex, 5);
 
 // Haversine distance in km
 function haversine(lat1: number, lng1: number, lat2: number, lng2: number) {
@@ -53,8 +41,7 @@ type ActiveView = "schedule" | "nearby";
 type GeoState = "idle" | "loading" | "success" | "error";
 
 export default function Home() {
-  const [activeDay, setActiveDay] = useState(() => getTodayIndex());
-  const [todayIndex] = useState(() => getTodayIndex());
+  const [activeDay, setActiveDay] = useState(initialDay);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeView, setActiveView] = useState<ActiveView>("schedule");
   const [geoState, setGeoState] = useState<GeoState>("idle");
@@ -362,7 +349,7 @@ export default function Home() {
       <div className="day-tabs-pad" style={{ padding: "16px 28px 0", display: "flex", gap: 8 }}>
         {weekSchedule.map((s, i) => {
           const isActive = i === activeDay;
-          const isToday = i === todayIndex;
+          const isToday = i === initialDay;
           return (
             <button key={s.day} onClick={() => { setActiveDay(i); setActiveView("schedule"); }} style={{
               flex: 1, padding: "10px 4px", borderRadius: 12,

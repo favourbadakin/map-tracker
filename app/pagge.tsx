@@ -30,10 +30,8 @@ const jsDayToScheduleIndex: Record<number, number> = {
   5: 4, // Friday
   6: 5, // Saturday
 };
-
-function getTodayIndex() {
-  return jsDayToScheduleIndex[new Date().getDay()] ?? 0;
-}
+const today = new Date().getDay();
+const initialDay = jsDayToScheduleIndex[today] ?? 0;
 
 // Haversine distance in km
 function haversine(lat1: number, lng1: number, lat2: number, lng2: number) {
@@ -53,8 +51,7 @@ type ActiveView = "schedule" | "nearby";
 type GeoState = "idle" | "loading" | "success" | "error";
 
 export default function Home() {
-  const [activeDay, setActiveDay] = useState(() => getTodayIndex());
-  const [todayIndex] = useState(() => getTodayIndex());
+  const [activeDay, setActiveDay] = useState(initialDay);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeView, setActiveView] = useState<ActiveView>("schedule");
   const [geoState, setGeoState] = useState<GeoState>("idle");
@@ -362,7 +359,7 @@ export default function Home() {
       <div className="day-tabs-pad" style={{ padding: "16px 28px 0", display: "flex", gap: 8 }}>
         {weekSchedule.map((s, i) => {
           const isActive = i === activeDay;
-          const isToday = i === todayIndex;
+          const isToday = i === initialDay;
           return (
             <button key={s.day} onClick={() => { setActiveDay(i); setActiveView("schedule"); }} style={{
               flex: 1, padding: "10px 4px", borderRadius: 12,

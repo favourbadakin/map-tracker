@@ -35,7 +35,7 @@ export default function WorkMap({ locations, selectedId, onSelect }: Props) {
       const map = L.map(containerId, {
         center: [6.5244, 3.3792],
         zoom: 11,
-        zoomControl: true,
+        zoomControl: false,
         
       });
 

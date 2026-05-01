@@ -57,11 +57,11 @@ export const weekSchedule: DaySchedule[] = [
       },{
         id: "sat-5",
         name: "Akorede Food Canteen",
-        address: "Buka",
+        address: "Gbekuba, Ibadan",
         lat: 7.395673,
         lng: 3.837912,
         category: "partner",
-        note: " Aspiring Urban Mainstream",
+        note: " Aspiring Urban Mainstream Buka",
       },{
         id: "sat-6",
         name: "Hallelujah Provision Store",

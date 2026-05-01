@@ -4,7 +4,7 @@ export type Location = {
   address: string;
   lat: number;
   lng: number;
-  category: "client" | "office" | "site" | "";
+  category: "client" | "office" | "site" | "partner";
   note?: string;
 };
 
@@ -25,8 +25,8 @@ export const weekSchedule: DaySchedule[] = [
         address: "",
         lat: 7.391705,
         lng: 3.829600,
-        category: "office",
-        note: "Morning briefing at 9AM",
+        category: "partner",
+        note: "Aspiring Urban Mainstream",
       },
       {
         id: "sat-2",
@@ -34,8 +34,8 @@ export const weekSchedule: DaySchedule[] = [
         address: "",
         lat: 7.392414,
         lng: 3.829182,
-        category: "client",
-        note: "Quarterly review meeting",
+        category: "partner",
+        note: "Aspiring Urban Mainstream",
       },
       {
         id: "sat-3",
@@ -43,7 +43,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Charity, Gbekuba Ibadan",
         lat: 7.394979,
         lng: 3.829467,
-        category: "",
+        category: "client",
         note: "Aspiring Urban Mainstream",
       },
       {
@@ -52,7 +52,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "",
         lat: 7.393480,
         lng: 3.835106,
-        category: "",
+        category: "partner",
         note: "Aspiring Urban Mainstream",
       },{
         id: "sat-5",
@@ -60,7 +60,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Buka",
         lat: 7.395673,
         lng: 3.837912,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-6",
@@ -68,7 +68,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "",
         lat: 7.397923,
         lng: 3.834590,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },
       //{
@@ -86,7 +86,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Gbekuba Road 12, Ibadan",
         lat: 7.396947,
         lng: 3.843031,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-9",
@@ -94,7 +94,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Lasokun Street, Ibadan",
         lat: 7.398134,
         lng: 3.840658,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-10",
@@ -102,7 +102,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Gbekuba Road 7",
         lat: 7.394683,
         lng: 3.840015,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-11",
@@ -110,7 +110,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Dojutelegan, Gbekuba, Ibadan",
         lat: 7.393570,
         lng: 3.840040,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-12",
@@ -118,7 +118,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.392810,
         lng: 3.835356,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-13",
@@ -126,7 +126,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.397986,
         lng: 3.830079,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-14",
@@ -134,7 +134,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.398040,
         lng: 3.834577,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-15",
@@ -142,7 +142,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.390243,
         lng: 3.836449,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-16",
@@ -150,7 +150,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.390739,
         lng: 3.836590,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-17",
@@ -158,7 +158,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.390734,
         lng: 3.81784,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-18",
@@ -166,7 +166,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Oladele, Ibadan",
         lat: 7.394231,
         lng: 3.833146,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-19",
@@ -174,7 +174,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.390569,
         lng: 3.836131,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-20",
@@ -182,7 +182,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Gbekuba Road 5",
         lat: 7.390806,
         lng: 3.836482,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-21",
@@ -190,7 +190,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.385034,
         lng: 3.824099,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-22",
@@ -198,7 +198,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.391080,
         lng: 3.836412,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-23",
@@ -206,7 +206,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Near Up Jesus, Gbekuba, Ibadan",
         lat: 7.400659,
         lng: 3.835960,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-24",
@@ -214,7 +214,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.383360,
         lng: 3.825513,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-25",
@@ -222,7 +222,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Akilapa Juction, Ibadan",
         lat: 7.406597,
         lng: 3.829907,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-26",
@@ -230,7 +230,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.390500,
         lng: 3.836118,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-27",
@@ -238,7 +238,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.392819,
         lng: 3.835489,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-28",
@@ -246,7 +246,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.401941,
         lng: 3.836487,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-29",
@@ -254,7 +254,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.409360,
         lng: 3.824790,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-30",
@@ -262,7 +262,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.400722,
         lng: 3.839576,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },
       // {
@@ -280,7 +280,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Gbekuba Road 7",
         lat: 7.388789,
         lng: 3.836334,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-33",
@@ -288,7 +288,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Agbofieti, Ibadan",
         lat: 7.410862,
         lng: 3.822277,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-34",
@@ -296,7 +296,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.394330,
         lng: 3.840103,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-35",
@@ -304,7 +304,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.403484,
         lng: 3.833532,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-36",
@@ -312,7 +312,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.409268,
         lng: 3.824591,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-37",
@@ -320,7 +320,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Ibadan",
         lat: 7.401961,
         lng: 3.836116,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       },{
         id: "sat-38",
@@ -328,7 +328,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "Gbekuba Road 7",
         lat: 7.391486,
         lng: 3.835681,
-        category: "",
+        category: "partner",
         note: " Aspiring Urban Mainstream",
       }
     ],
@@ -397,7 +397,7 @@ export const weekSchedule: DaySchedule[] = [
         address: "GRA Ibadan",
         lat: 6.5997,
         lng: 3.3412,
-        category: "",
+        category: "partner",
       },
       {
         id: "thu-2",
@@ -455,12 +455,12 @@ export const categoryColors: Record<Location["category"], string> = {
   office: "#3b82f6",
   client: "#f43f5e",
   site: "#f59e0b",
-  : "#10b981",
+  partner: "#10b981",
 };
 
 export const categoryLabels: Record<Location["category"], string> = {
   office: "Office",
   client: "Client",
   site: "Site",
-  : "Partner",
+  partner: "Partner",
 };

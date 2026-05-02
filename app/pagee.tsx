@@ -16,21 +16,23 @@ const categoryIcons: Record<Location["category"], string> = {
   client: "👥",
   site: "🏗️",
   partner: "🤝",
+  //"": "🏪",
 };
 
-// Map JS getDay() values to weekSchedule indices dynamically
-// so this never goes out of sync with the order in locations.ts
-const dayNameToJsDay: Record<string, number> = {
-  Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3,
-  Thursday: 4, Friday: 5, Saturday: 6,
+// weekSchedule order: Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5
+// JS getDay(): 0=Sun,1=Mon,2=Tue,3=Wed,4=Thu,5=Fri,6=Sat
+// Only Sunday is not in the schedule — defaults to index 0 (Monday)
+const jsDayToScheduleIndex: Record<number, number> = {
+  1: 1, // Monday
+  2: 2, // Tuesday
+  3: 3, // Wednesday
+  4: 4, // Thursday
+  5: 5, // Friday
+  6: 0, // Saturday
 };
 
 function getTodayIndex() {
-  const jsDay = new Date().getDay();
-  const idx = weekSchedule.findIndex(
-    (s) => dayNameToJsDay[s.day] === jsDay
-  );
-  return idx === -1 ? 0 : idx;
+  return jsDayToScheduleIndex[new Date().getDay()] ?? 0;
 }
 
 // Haversine distance in km
@@ -308,8 +310,8 @@ export default function Home() {
         {schedule.day.toUpperCase()} — {locations.length} LOCATION{locations.length !== 1 ? "S" : ""}
       </div>
       {locations.map((loc, idx) => renderLocationCard(loc, idx))}
-      {/* Legend
-      <div style={{
+      {/* Legend */}
+      {/* <div style={{
         padding: "10px 14px", background: "var(--surface)",
         border: "1px solid var(--border)", borderRadius: 12,
       }}>
